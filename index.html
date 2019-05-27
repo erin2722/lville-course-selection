@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Selection</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="icon" type="image/png" href="seal.png">
+    <link rel="stylesheet" type="text/css" href="courseSelection.css">
+</head>
+
+<!-- <% myForm = 5;
+  myForm = ( form === "Form II" ) ? 3 : myForm;
+  myForm = ( form === "Form III" ) ? 4 : myForm;
+  myForm = ( form === "Form IV" ) ? 5 : myForm;
+  myForm = ( form === "Form V" ) ? 5 : myForm;
+%> -->
+
+<body>
+    <div class = "container-fluid">
+    <div class = "headerRow row row-bottom-margin fixed-top">
+      <div id="nameForm" class="col-sm-4">
+        &nbsp;&nbsp;&nbsp; Student Name: <input type="text" id = "name" value="<%=userInfo.firstLast%>"></input> <br><br>
+        Form (Next Year): <input type="text" id = "form" value="<%=myForm%>"></input>
+      </div>
+      <div class="col-sm-4" id="titleDiv">
+        <b id="title" style="font-size: 25px; font-weight: lighter;">Scheduling Sheet</b>
+      </div>
+      <div class = "col-sm-2" id = "catalogMode">
+        <div>
+            <p id = "catText">Catalog Mode:  </p>
+            <label class="switch">
+              <input type="checkbox" id = "catalog">
+              <span class="slider round"></span>
+            </label>
+        </div>
+      </div>
+      <div class="col-sm-2" id = "saveSubmitDiv">
+        <div id = "saveSubmit" class = "btn-group" role = "group">
+          <button value="submit" id="saveBtn" class = "btn btn-default">Save</button>
+          <button value="submit" id="submitBtn" class = "btn btn-default">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="headerRow row">
+      <div id="fall" class = "col-sm-4 table-responsive">
+        <table class = "headerTable table">
+          <tr><th colspan="4">Fall (T1)</th></tr>
+          <tr>
+            <th class = "priorityHead">#</th>
+            <th class = "deptHead">Dept.</th>
+            <th class = "courseHead">Course</th>
+          </tr>
+        </table>
+      </div>
+      <div id="winter" class = "col-sm-4 table-responsive">
+        <table class = "headerTable table">
+          <tr><th colspan="4">Winter (T2)</th></tr>
+          <th class = "priorityHead">#</th>
+          <th class = "deptHead">Dept.</th>
+          <th class = "courseHead">Course</th>
+        </table>
+      </div>
+      <div id="spring" class = "col-sm-4 table-responsive">
+        <table class = "headerTable table">
+          <tr><th colspan="4">Spring (T3)</th></tr>
+          <th class = "priorityHead">#</th>
+          <th class = "deptHead">Dept.</th>
+          <th class = "courseHead">Course</th>
+        </table>
+      </div>
+    </div>
+    <div class = "row" id="credits">
+      <p>Created by Erin McNulty '19</p>
+    </div>
+  </div>
+  <div id="courseDescriptionBox" class = "position-fixed">
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <br>
+    <p id="descriptionText">Please select a course to view its description</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="courseSelection.js"></script>
+  <script src="courseListCSV.js"></script>
+  <script src="courseDescriptions.js"></script>
+  <script src="sampleStudentOutput.js"></script>
+</body>
+</html>
