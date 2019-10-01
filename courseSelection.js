@@ -15,7 +15,7 @@ $(document).ready(function(){
   have already saved.*/
   var allCoursesArray = createAllCoursesArray(courseList);
   var courseDescriptionArray = createCourseDescriptionArray(courseDescriptions);
-  var savedSelectionsArray = "";//createSavedSelectionsArray(outputCSV);
+  var savedSelectionsArray = createSavedSelectionsArray(""); //(outputCSV);
 
   /*Sentinel will also pull student data here. Everything will be a constant but
   I am leaving it as a variable for now for the presetation. It does not matter
